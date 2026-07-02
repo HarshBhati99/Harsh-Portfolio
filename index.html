@@ -1597,14 +1597,41 @@
   }
   /* ---------- GAME: PIPELINE SPRINT ---------- */
   (function(){
-    var stages = ['Discovery', 'Qualified', 'Proposal', 'Won'];
+     var stages = ['Discovery', 'Qualified', 'Proposal', 'Won'];
     var clues = {
-      'Discovery': ['Just landed on the site', 'First email opened', 'Downloaded a guide', 'Filled out a contact form'],
-      'Qualified': ['Budget confirmed', 'Decision-maker identified', 'Needs assessment done', 'Fits ideal customer profile'],
-      'Proposal': ['Contract sent', 'Pricing under review', 'Demo done, awaiting sign-off', 'Redlines being negotiated'],
-      'Won': ['Contract signed!', 'Payment received', 'Kickoff call booked', 'Deal closed 🎉']
+      'Discovery': [
+        'Just landed on the site', 'First email opened', 'Downloaded a guide', 'Filled out a contact form',
+        'Clicked a LinkedIn ad', 'Booked a discovery call', 'Left a chatbot message', 'Signed up for the newsletter',
+        'Attended a webinar', 'Referred by an existing client', 'Requested a demo', 'Followed the company page',
+        'Asked a question on a forum', 'Opened three emails this week'
+      ],
+      'Qualified': [
+        'Budget confirmed', 'Decision-maker identified', 'Needs assessment done', 'Fits ideal customer profile',
+        'Timeline confirmed for this quarter', 'Pain point matches our solution', 'Authority to sign confirmed',
+        'Competitor comparison requested', 'Technical fit validated', 'Stakeholders looped in',
+        'Use case matches a past win', 'Company size fits target segment', 'Champion identified internally',
+        'Renewal date lines up with budget cycle'
+      ],
+      'Proposal': [
+        'Contract sent', 'Pricing under review', 'Demo done, awaiting sign-off', 'Redlines being negotiated',
+        'Legal reviewing terms', 'Custom quote requested', 'Second demo scheduled', 'Procurement got involved',
+        'Comparing two pricing tiers', 'Waiting on final board approval', 'Discount request under review',
+        'References requested', 'Security questionnaire submitted', 'Verbal yes, paperwork pending'
+      ],
+      'Won': [
+        'Contract signed!', 'Payment received', 'Kickoff call booked', 'Deal closed 🎉',
+        'PO issued', 'Welcome email sent', 'Onboarding scheduled', 'First invoice paid',
+        'Account handed to success team', 'Renewal auto-confirmed', 'Upsell approved',
+        'Champion celebrated internally', 'Logo added to case studies', 'Deal marked closed-won in CRM'
+      ]
     };
-    var companies = ['Acme Retail', 'Nova Systems', 'BrightPath Ltd', 'Solaris Group', 'Kestrel & Co', 'Marlin Digital', 'Ferro Works', 'Willow Tech', 'Granite Partners', 'Cobalt Studio', 'Ember Logistics', 'Vantage Foods'];
+    var companies = [
+      'Acme Retail', 'Nova Systems', 'BrightPath Ltd', 'Solaris Group', 'Kestrel & Co', 'Marlin Digital',
+      'Ferro Works', 'Willow Tech', 'Granite Partners', 'Cobalt Studio', 'Ember Logistics', 'Vantage Foods',
+      'Harlow & Finch', 'Meridian Labs', 'Northwind Supply', 'Pinegate Ventures', 'Slate & Co', 'Amberlight Media',
+      'Foxglove Analytics', 'Redstone Capital', 'Thistledown Foods', 'Ironbridge Freight', 'Copperfield Studio',
+      'Windrose Consulting'
+    ];
 
     var gameStartEl = document.getElementById('gameStart');
     var gameCardEl = document.getElementById('gameCard');
