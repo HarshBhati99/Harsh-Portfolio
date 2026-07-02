@@ -552,9 +552,13 @@
 
   @media (max-width:480px){
     .explainer{ padding:20px; }
-    .explainer-frame{ height:190px; }
+    .explainer-frame{ height:250px; }
     .ex-connect{ width:200px; height:120px; }
     .ex-connect-line-1, .ex-connect-line-2, .ex-connect-line-3, .ex-connect-line-4{ width:34px; }
+    .ex-wf-row{ flex-direction: column; gap:7px; }
+    .ex-wf-node{ min-width:170px; font-size:10.5px; padding:7px 10px; }
+    .ex-wf-trace{ width:2px; height:11px; }
+    .ex-wf-trace::after{ background: linear-gradient(180deg, transparent, var(--accent-2), transparent); }
   }
 
   /* ---------- PLAY HINT (floating game callout) ---------- */
