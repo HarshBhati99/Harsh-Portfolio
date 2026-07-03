@@ -193,11 +193,17 @@
   @media (max-width:640px){
     .pipeline-line, .pipeline-line-fill{ display:none; }
     .pipeline-nodes{ flex-direction:column; align-items:flex-start; gap:18px; position:relative; padding-left:18px; }
-    .pipeline-nodes::before{ content:''; position:absolute; left:4px; top:4px; bottom:4px; width:1px; background: var(--line); }
+    .pipeline-nodes::before{
+      content:''; position:absolute; left:4px; top:4px; bottom:4px; width:1px;
+      background: repeating-linear-gradient(180deg, var(--accent-2) 0 6px, transparent 6px 12px);
+      background-size: 1px 18px;
+      animation: flow-vertical 1.4s linear infinite;
+    }
     .pnode{ flex-direction:row; align-items:center; gap:12px; flex:none; width:100%; }
     .pnode-dot{ margin-bottom:0; flex-shrink:0; }
     .pnode-label{ display:block; text-align:left; max-width:none; font-size:12px; }
   }
+  @keyframes flow-vertical{ from{ background-position:0 0; } to{ background-position:0 18px; } }
 
   .ops-feed-strip{ border-top:1px solid var(--line); border-bottom:1px solid var(--line); background: rgba(255,255,255,0.015); padding:14px 0; margin-top:56px; overflow:hidden; }
   .ops-feed-inner{ display:flex; align-items:center; gap:18px; flex-wrap:nowrap; }
